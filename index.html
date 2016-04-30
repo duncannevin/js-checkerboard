@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>JS_Checkerboard</title>
+	<style type="text/css">
+		*{
+			margin: 0 auto;
+			padding: 0 auto;
+		}
+		table{
+			width: 800px;
+			height: 800px;
+			border: 1px solid green;
+		}	
+		td{
+			height: 100px;
+			border: 1px solid blue;
+		}
+		.even td:nth-child(even){
+			background-color: red;
+		}
+		.even td:nth-child(odd){
+			background-color: black;
+		}
+		.odd td:nth-child(odd){
+			background-color: red;
+		}
+		.odd td:nth-child(even){
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('body').append('<table>');
+
+				for(var i = 0; i < 8; i++){
+
+					if(i%2===0){
+						$('table').append('<tr class="even"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>');
+					}else{
+						$('table').append('<tr class="odd"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>')
+					}					
+				}
+	
+			$('body').append('</table>');
+		});	
+
+
+	</script>
+</body>
+</html>
